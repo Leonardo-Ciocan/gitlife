@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="-110" id="exu-Wy-HP0" customClass="IssueViewCell" customModule="Gitlife" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="429" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="exu-Wy-HP0" id="yeL-5O-l97">
+                <rect key="frame" x="0.0" y="0.0" width="429" height="119"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Issue name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGf-PP-kb3">
+                        <rect key="frame" x="29" y="8" width="87" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hardware" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyi-EI-ld9">
+                        <rect key="frame" x="29" y="39" width="87" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="1" green="0.39582490819999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMK-LR-0UN">
+                        <rect key="frame" x="114" y="39" width="87" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.02037999672675761" green="0.53651488429784422" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hbjdbasjdbsajdbjsabdhjasbdyuewbdyuewvoidyvewboudyvbewyudvewouydvewuovdwe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyV-jJ-vCp">
+                        <rect key="frame" x="29" y="58" width="371" height="53"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CGf-PP-kb3" firstAttribute="leading" secondItem="yeL-5O-l97" secondAttribute="leadingMargin" constant="21" id="JaO-mX-rOq"/>
+                    <constraint firstItem="QyV-jJ-vCp" firstAttribute="leading" secondItem="yeL-5O-l97" secondAttribute="leadingMargin" constant="21" id="KBC-C4-tLH"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QyV-jJ-vCp" secondAttribute="bottom" id="a1a-cB-CsA"/>
+                    <constraint firstItem="QyV-jJ-vCp" firstAttribute="top" secondItem="yeL-5O-l97" secondAttribute="topMargin" constant="50" id="bKL-e7-KLY"/>
+                    <constraint firstAttribute="topMargin" secondItem="CGf-PP-kb3" secondAttribute="top" id="heh-dl-if2"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="QyV-jJ-vCp" secondAttribute="trailing" constant="21" id="jgx-ny-DXM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lblBody" destination="QyV-jJ-vCp" id="kEI-Pq-hPe"/>
+                <outlet property="lblName" destination="CGf-PP-kb3" id="7or-Y2-nQg"/>
+            </connections>
+            <point key="canvasLocation" x="342.5" y="596"/>
+        </tableViewCell>
+    </objects>
+</document>
