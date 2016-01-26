@@ -10,12 +10,15 @@ import Foundation
 import UIKit
 import Parse
 
-class IssueTableViewController : UITableViewController {
+class IssueTableViewController : UITableViewController , UISearchResultsUpdating , UISearchBarDelegate {
+    
+    
+    var data : [Issue] = []
+    var searchController : UISearchController?
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 120.0
     }
-    
-    var data : [Issue] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +28,7 @@ class IssueTableViewController : UITableViewController {
         //self.tableView.allowsSelection = false
         self.tableView.separatorStyle = .SingleLine
         self.tableView.separatorColor = UIColor.grayColor()
+        
         
         
         Parse.setApplicationId("3jmXTtK4n6dDtcv4h4FERiED9wLluOCLiraOWIey",
@@ -37,9 +41,31 @@ class IssueTableViewController : UITableViewController {
             
         }
         
+        self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController?.searchResultsUpdater = self
+        self.searchController?.dimsBackgroundDuringPresentation = false
+        self.searchController?.searchBar.scopeButtonTitles = ["Open" , "Closed"]
+        self.searchController?.searchBar.delegate = self
+        self.searchController?.searchBar.sizeToFit()
+        self.searchController?.hidesNavigationBarDuringPresentation = false
+        self.searchController?.searchBar.tintColor = AppDelegate.color
+        self.searchController?.searchBar.barTintColor = UIColor.whiteColor()
+        self.searchController?.searchBar.layer.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).CGColor
         
-
+        self.tableView.tableHeaderView = self.searchController?.searchBar
+        self.definesPresentationContext = true
+        
+        
     }
+    
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        
+    }
+    
+    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        
+    }
+    
     
     override func viewDidAppear(animated: Bool) {
         let query = Issue.query()!
