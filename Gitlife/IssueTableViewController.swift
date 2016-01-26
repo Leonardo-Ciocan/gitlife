@@ -71,8 +71,8 @@ class IssueTableViewController : UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        AppDelegate.currentIssue = data[(self.tableView.indexPathForSelectedRow?.item)!]
         self.performSegueWithIdentifier("toDetail", sender: nil)
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

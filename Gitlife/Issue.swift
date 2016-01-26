@@ -13,6 +13,13 @@ class Issue : PFObject {
     @NSManaged var title : String?
     @NSManaged var body : String?
     @NSManaged var author : PFUser?
+    var closed : Bool {
+        get{
+            print(self["Closed"])
+            return self["Closed"] as! Bool
+        }
+        set{ self["Closed"] = newValue }
+    }
     
     override class func query() -> PFQuery? {
         let q = PFQuery(className: Issue.parseClassName())
@@ -26,6 +33,8 @@ class Issue : PFObject {
         self.title = title
         self.author = author
         self.body = body
+        //implicit
+        self.closed = false
     }
     
     override init(){

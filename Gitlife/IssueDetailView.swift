@@ -13,7 +13,8 @@ class IssueDetailView : UIViewController{
     
     @IBOutlet weak var data: UITextView!
     @IBOutlet weak var lblTitle : UILabel!
-    
+    @IBOutlet weak var issueStatus : UILabel?
+
     var i : Issue?
     
     func putData( i : Issue){
@@ -22,10 +23,15 @@ class IssueDetailView : UIViewController{
        
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidLoad() {
         if(self.i != nil){
             self.data.text = i!.body
             self.lblTitle.text = i!.title
+            self.issueStatus?.text = i!.closed ? "Closed" : "Open"
         }
+    }
+    
+    func refreshIssueStatus(){
+        self.issueStatus?.text = i!.closed ? "Closed" : "Open"
     }
 }

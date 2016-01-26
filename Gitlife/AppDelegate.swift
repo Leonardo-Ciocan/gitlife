@@ -12,8 +12,9 @@ import Parse
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var color : UIColor = UIColor(hue: 0.0222, saturation: 1, brightness: 1, alpha: 1.0) /* #ff2100 */
-
+    static let color : UIColor = UIColor(hue: 0.0222, saturation: 1, brightness: 1, alpha: 1.0) /* #ff2100 */
+    static var currentIssue : Issue?
+    
     var window: UIWindow?
 
 
@@ -21,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         Parse.enableLocalDatastore()
         
-       UINavigationBar.appearance().tintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().barTintColor = color
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().barTintColor = AppDelegate.color
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         return true
     }

@@ -11,8 +11,8 @@ import Parse
 
 class CreateIssueViewController: UIViewController {
 
-    @IBOutlet var txtName : UITextField?
-    @IBOutlet var txtBody : UITextView?
+    @IBOutlet weak var txtName : UITextField?
+    @IBOutlet weak var txtBody : UITextView?
 
     
     override func viewDidLoad() {
