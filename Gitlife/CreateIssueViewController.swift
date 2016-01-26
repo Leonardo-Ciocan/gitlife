@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Parse
 
 class CreateIssueViewController: UIViewController {
 
+    @IBOutlet var txtName : UITextField?
+    @IBOutlet var txtBody : UITextView?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,16 +28,11 @@ class CreateIssueViewController: UIViewController {
     
     @IBAction func createIssue(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+        
+        let newIssue = Issue(title: (txtName?.text)!, author: PFUser.currentUser()! , body: (txtBody?.text)!)
+        newIssue.saveInBackground()
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

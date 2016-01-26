@@ -37,6 +37,11 @@ class IssueTableViewController : UITableViewController {
             
         }
         
+        
+
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         let query = Issue.query()!
         query.findObjectsInBackgroundWithBlock({objects , err in
             
@@ -53,7 +58,6 @@ class IssueTableViewController : UITableViewController {
                 print("some issue")
             }
         })
-
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,10 +79,10 @@ class IssueTableViewController : UITableViewController {
         
         if segue.identifier == "toDetail" {
         segue.destinationViewController.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
-        segue.destinationViewController.navigationItem.title = data[(self.tableView.indexPathForSelectedRow?.item)!].title
+        segue.destinationViewController.navigationItem.title = "" //data[(self.tableView.indexPathForSelectedRow?.item)!].title
         segue.destinationViewController.navigationItem.backBarButtonItem?.title = "Issues"
         segue.destinationViewController.navigationItem.backBarButtonItem?.tintColor = UIColor.whiteColor()
-        print("segue")
+        //print("segue")
         ((segue.destinationViewController as! UITabBarController).viewControllers![0] as? IssueDetailView)!.putData( data[(self.tableView.indexPathForSelectedRow?.item)!])
         }
     }

@@ -12,6 +12,8 @@ import UIKit
 class IssueDetailView : UIViewController{
     
     @IBOutlet weak var data: UITextView!
+    @IBOutlet weak var lblTitle : UILabel!
+    
     var i : Issue?
     
     func putData( i : Issue){
@@ -23,6 +25,7 @@ class IssueDetailView : UIViewController{
     override func viewDidAppear(animated: Bool) {
         if(self.i != nil){
             self.data.text = i!.body
+            self.lblTitle.text = i!.title
         }
     }
 }
