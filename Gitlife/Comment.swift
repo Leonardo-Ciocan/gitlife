@@ -1,14 +1,3 @@
-//
-//  Comment.swift
-//  Gitlife
-//
-//  Created by Leonardo Ciocan on 27/01/2016.
-//  Copyright © 2016 LC. All rights reserved.
-//
-
-import Foundation
-
-//
 //  Issue.swift
 //  Gitlife
 //
@@ -19,32 +8,23 @@ import Foundation
 import Foundation
 import Parse
 
-class Issue : PFObject {
-    @NSManaged var title : String?
+class Comment : PFObject {
     @NSManaged var body : String?
     @NSManaged var author : PFUser?
-    var closed : Bool {
-        get{
-            print(self["Closed"])
-            return self["Closed"] as! Bool
-        }
-        set{ self["Closed"] = newValue }
-    }
+    @NSManaged var issue : Issue?
     
     override class func query() -> PFQuery? {
-        let q = PFQuery(className: Issue.parseClassName())
+        let q = PFQuery(className: Comment.parseClassName())
         q.includeKey("author")
         q.orderByAscending("createdAt")
         return q
     }
     
-    init(title : String , author : PFUser , body : String){
+    init(author : PFUser , body : String , issue : Issue){
         super.init()
-        self.title = title
         self.author = author
         self.body = body
-        //implicit
-        self.closed = false
+        self.issue = issue
     }
     
     override init(){
@@ -52,9 +32,9 @@ class Issue : PFObject {
     }
 }
 
-extension Issue : PFSubclassing {
+extension Comment : PFSubclassing {
     class func parseClassName() -> String {
-        return "Issue"
+        return "Comment"
     }
     
     override class func initialize() {
