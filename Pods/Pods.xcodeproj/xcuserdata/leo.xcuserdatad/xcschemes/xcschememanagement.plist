@@ -19,20 +19,40 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SlackTextViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A44AF22A828654070C0ACB744F0F4D9</key>
+		<key>2DE3AAAD29F843172D2D2510C4703B1F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>49309CFB23DDCE837B243B59562CDFFD</key>
+		<key>4EDA452517A913B556C7860F490D5FD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8B01B9AD187B02ACC518BBAD195A6850</key>
+		<key>979264812B928041D2A2F28D9403E5EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5EAD6026F579B2DBD27A054D89F13DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E0F2D383175E2C62EFB76C7A84B81106</key>
 		<dict>
 			<key>primary</key>
 			<true/>

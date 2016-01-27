@@ -22,6 +22,9 @@
 		B3B62F771C54F89600795CB5 /* CreateIssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B62F761C54F89600795CB5 /* CreateIssueViewController.swift */; };
 		B3B62F791C556B9000795CB5 /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B62F781C556B9000795CB5 /* Issue.swift */; };
 		B3E8C5201C58241F006BD7E0 /* DetailTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E8C51F1C58241F006BD7E0 /* DetailTabController.swift */; };
+		B3E8C5221C5839E4006BD7E0 /* CommentsCoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E8C5211C5839E4006BD7E0 /* CommentsCoreView.swift */; };
+		B3E8C5241C583B60006BD7E0 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E8C5231C583B60006BD7E0 /* CommentCell.swift */; };
+		B3E8C5261C584181006BD7E0 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E8C5251C584181006BD7E0 /* Comment.swift */; };
 		CF5A61FC8B2E73D37D390D5D /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A4A6BF638A3C4A12160C8B /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -63,10 +66,13 @@
 		B3B62F6E1C54E98B00795CB5 /* IssueTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueTableViewController.swift; sourceTree = "<group>"; };
 		B3B62F701C54EB5300795CB5 /* IssueViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueViewCell.swift; sourceTree = "<group>"; };
 		B3B62F721C54EBC300795CB5 /* IssueViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IssueViewCell.xib; sourceTree = "<group>"; };
-		B3B62F741C54F69B00795CB5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		B3B62F741C54F69B00795CB5 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B3B62F761C54F89600795CB5 /* CreateIssueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIssueViewController.swift; sourceTree = "<group>"; };
 		B3B62F781C556B9000795CB5 /* Issue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		B3E8C51F1C58241F006BD7E0 /* DetailTabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTabController.swift; sourceTree = "<group>"; };
+		B3E8C5211C5839E4006BD7E0 /* CommentsCoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsCoreView.swift; sourceTree = "<group>"; };
+		B3E8C5231C583B60006BD7E0 /* CommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		B3E8C5251C584181006BD7E0 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,9 @@
 				B3B62F781C556B9000795CB5 /* Issue.swift */,
 				B33DAD0A1C5582C300466C96 /* IssueDetailView.swift */,
 				B3E8C51F1C58241F006BD7E0 /* DetailTabController.swift */,
+				B3E8C5211C5839E4006BD7E0 /* CommentsCoreView.swift */,
+				B3E8C5231C583B60006BD7E0 /* CommentCell.swift */,
+				B3E8C5251C584181006BD7E0 /* Comment.swift */,
 			);
 			path = Gitlife;
 			sourceTree = "<group>";
@@ -361,12 +370,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B33DAD0B1C5582C300466C96 /* IssueDetailView.swift in Sources */,
+				B3E8C5221C5839E4006BD7E0 /* CommentsCoreView.swift in Sources */,
 				B3B62F431C54E7D200795CB5 /* ViewController.swift in Sources */,
 				B3E8C5201C58241F006BD7E0 /* DetailTabController.swift in Sources */,
 				B3B62F6F1C54E98B00795CB5 /* IssueTableViewController.swift in Sources */,
+				B3E8C5241C583B60006BD7E0 /* CommentCell.swift in Sources */,
 				B3B62F711C54EB5300795CB5 /* IssueViewCell.swift in Sources */,
 				B3B62F771C54F89600795CB5 /* CreateIssueViewController.swift in Sources */,
 				B3B62F411C54E7D200795CB5 /* AppDelegate.swift in Sources */,
+				B3E8C5261C584181006BD7E0 /* Comment.swift in Sources */,
 				B3B62F791C556B9000795CB5 /* Issue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

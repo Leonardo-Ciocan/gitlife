@@ -49,7 +49,7 @@
         <!--Comments-->
         <scene sceneID="vpp-eU-qub">
             <objects>
-                <viewController id="vkP-WX-6Pb" sceneMemberID="viewController">
+                <viewController id="vkP-WX-6Pb" customClass="CommentsCoreView" customModule="Gitlife" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F4x-5q-REp"/>
                         <viewControllerLayoutGuide type="bottom" id="BLL-Iv-afv"/>

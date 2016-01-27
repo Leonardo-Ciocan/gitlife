@@ -1,4 +1,14 @@
 //
+//  Comment.swift
+//  Gitlife
+//
+//  Created by Leonardo Ciocan on 27/01/2016.
+//  Copyright © 2016 LC. All rights reserved.
+//
+
+import Foundation
+
+//
 //  Issue.swift
 //  Gitlife
 //
